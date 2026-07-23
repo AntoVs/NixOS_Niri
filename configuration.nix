@@ -25,7 +25,7 @@
 
   # --- System Services ---
   services = {
-    displayManager.ly.enable = true; # Lightweight login manager
+    displayManager.ly.enable = true;
     flatpak.enable = true;
     upower.enable = true;
     power-profiles-daemon.enable = true;
@@ -51,15 +51,12 @@
       enable = true;
       enable32Bit = true;
     };
-    # Required backend flag for LACT power tuning capabilities
     amdgpu.overdrive.enable = true; 
   };
 
-  # --- Security Contexts ---
   security.polkit.enable = true;
   security.rtkit.enable = true;
 
-  # --- Typography Styling ---
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
   ];
@@ -71,10 +68,8 @@
     QT_QPA_PLATFORMTHEME = "qt6ct";
   };
 
-  # --- Nix Engine Rules ---
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
-
   system.stateVersion = "26.05";
 }
 

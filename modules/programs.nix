@@ -11,8 +11,9 @@
   };
 
   environment.systemPackages = with pkgs; [
-    vim wget git btop fastfetch kitty firefox pkgs.vlc
+    neovim wget git btop fastfetch kitty firefox pkgs.vlc
     kdePackages.polkit-kde-agent-1
+    tree
     pkgs.heroic
     pkgs.android-tools
     pkgs.discord pkgs.telegram-desktop protonup-qt

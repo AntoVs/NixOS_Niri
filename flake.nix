@@ -24,12 +24,12 @@
         ./modules/niri.nix
         ./modules/noctalia.nix
         ./modules/programs.nix
-        home-manager.nixosModules.home-manager # <-- Integrates HM as a system module
+        home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = { inherit inputs; };
-          home-manager.users.anto = import ./home.nix; # <-- Points to your new user profile
+          home-manager.users.anto = import ./home.nix;
         }
       ];
     };
