@@ -11,7 +11,6 @@
   # User-specific packages
   home.packages = with pkgs; [
     btop
-    vesktop 
   ];
 
   # Noctalia Shell configuration
